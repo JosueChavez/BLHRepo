@@ -304,18 +304,16 @@ private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 
     private void jbModificarRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbModificarRutaActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
         RutaRecDomiciliar rrd = new RutaRecDomiciliar();
         rrd.setVisible(true);
         RutaRecDomiciliar.jlIndiceOc.setText(jlIndiceOculto.getText());
         System.out.println(jlIndiceOculto.getText());
-        op.modificarRuta(Integer.parseInt(jtRutas.getValueAt(jtRutas.getSelectedRow(), 0).toString()), RutaRecDomiciliar.jtTrayectos);
+        //op.modificarRuta(Integer.parseInt(jtRutas.getValueAt(jtRutas.getSelectedRow(), 0).toString()), RutaRecDomiciliar.jtTrayectos);
         this.setVisible(false);
-=======
         if (jtRutas.getSelectedRow() == -1) {
             JOptionPane.showMessageDialog(rootPane, "¡Seleccione la ruta a modificar!");
         } else {
-            RutaRecDomiciliar rrd = new RutaRecDomiciliar();
+            //RutaRecDomiciliar rrd = new RutaRecDomiciliar();
             rrd.setVisible(true);
             RutaRecDomiciliar.jlIndiceOc.setText(jlIndiceOculto.getText());
             System.out.println(jlIndiceOculto.getText());
@@ -327,7 +325,6 @@ private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
             RutaRecDomiciliar.jbGuardar.setVisible(false);
             this.setVisible(false);
         }
->>>>>>> 34ab22b6972da70c5bf31182c5858d98c07a0b8a
 
     }//GEN-LAST:event_jbModificarRutaActionPerformed
 
