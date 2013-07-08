@@ -93,7 +93,13 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jcFechaParto = new org.freixas.jcalendar.JCalendarCombo();
         jsPeso = new javax.swing.JSpinner();
         jLabel36 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jtfNacionalidad = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        jtfOcupacion = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jtfEscolaridad = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
@@ -126,6 +132,10 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jcFechaObtDatos = new org.freixas.jcalendar.JCalendarCombo();
         jLabel29 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jtfHb = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jtfHto = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jtDonantes = new javax.swing.JTable();
         jPanel9 = new javax.swing.JPanel();
@@ -150,6 +160,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jbGuardar = new javax.swing.JButton();
         jbModificar = new javax.swing.JButton();
         jbPrint = new javax.swing.JButton();
+        jbHistoria = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -165,13 +176,17 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jcbECivil = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
+        jtfNumero = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Donación -  Banco de Leche Humana");
+        setTitle("Formulario de Registro de Donadoras -  Banco de Leche Humana");
         setIconImage(getIconImage());
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
@@ -236,8 +251,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 17;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jsEstatura, gridBagConstraints);
@@ -254,16 +269,16 @@ public class RecoleccionLeche extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 21;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jsSGest, gridBagConstraints);
 
-        jLabel16.setText("Estatura (cm):");
+        jLabel16.setText("Talla (cm):");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 17;
         gridBagConstraints.gridwidth = 10;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel16, gridBagConstraints);
@@ -271,7 +286,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel28.setText("Fecha de Nacimiento:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 11;
         gridBagConstraints.gridwidth = 28;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel28, gridBagConstraints);
@@ -284,8 +299,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 13;
         gridBagConstraints.gridwidth = 24;
         gridBagConstraints.gridheight = 3;
         jPanel5.add(jcFechaNac, gridBagConstraints);
@@ -293,15 +308,15 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel34.setText("Sem. Gestación:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 16;
-        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.gridwidth = 12;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel34, gridBagConstraints);
 
         jLabel22.setText("Fecha del parto:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 22;
+        gridBagConstraints.gridy = 24;
         gridBagConstraints.gridwidth = 10;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel22, gridBagConstraints);
@@ -316,7 +331,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 24;
+        gridBagConstraints.gridy = 26;
         gridBagConstraints.gridwidth = 28;
         gridBagConstraints.gridheight = 3;
         jPanel5.add(jcFechaParto, gridBagConstraints);
@@ -333,8 +348,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 11;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 19;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jsPeso, gridBagConstraints);
@@ -342,19 +357,60 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel36.setText("Peso (lb):");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 19;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel36, gridBagConstraints);
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
+        jLabel6.setText("Nacionalidad:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jLabel6, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 17;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jtfNacionalidad, gridBagConstraints);
+
+        jLabel11.setText("Ocupación:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jLabel11, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 17;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jtfOcupacion, gridBagConstraints);
+
+        jLabel12.setText("Escolaridad:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jLabel12, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 17;
+        gridBagConstraints.gridheight = 2;
+        jPanel5.add(jtfEscolaridad, gridBagConstraints);
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 30;
         gridBagConstraints.gridheight = 30;
-        jPanel5.add(jLabel11, gridBagConstraints);
+        jPanel5.add(jLabel17, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -400,12 +456,12 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel19.setText("HbsAg:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jLabel19, gridBagConstraints);
 
-        jLabel20.setText("Examenes:");
+        jLabel20.setText("Exámenes:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -416,7 +472,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel21.setText("HIV:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jLabel21, gridBagConstraints);
@@ -438,7 +494,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 18;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHivNoD, gridBagConstraints);
@@ -452,7 +508,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHivNeg, gridBagConstraints);
@@ -466,7 +522,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHivPos, gridBagConstraints);
@@ -522,7 +578,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHbsagPos, gridBagConstraints);
@@ -536,7 +592,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHbsagNeg, gridBagConstraints);
@@ -550,7 +606,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 18;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jrbHbsagNoD, gridBagConstraints);
@@ -730,7 +786,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 3;
         jPanel8.add(jcFechaObtDatos, gridBagConstraints);
 
-        jLabel29.setText("Fecha obtención de datos:");
+        jLabel29.setText("Fecha de Registro:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 24;
@@ -738,14 +794,41 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jLabel29, gridBagConstraints);
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
+        jLabel7.setText("Hb:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridheight = 2;
+        jPanel8.add(jLabel7, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridheight = 2;
+        jPanel8.add(jtfHb, gridBagConstraints);
+
+        jLabel14.setText("Hto:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        jPanel8.add(jLabel14, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 16;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridheight = 2;
+        jPanel8.add(jtfHto, gridBagConstraints);
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 30;
         gridBagConstraints.gridheight = 30;
-        jPanel8.add(jLabel7, gridBagConstraints);
+        jPanel8.add(jLabel18, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 21;
@@ -1093,6 +1176,20 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 4;
         jPanel11.add(jbPrint, gridBagConstraints);
 
+        jbHistoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/page_add.png"))); // NOI18N
+        jbHistoria.setText("Historia");
+        jbHistoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbHistoriaActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridheight = 4;
+        jPanel11.add(jbHistoria, gridBagConstraints);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 19;
@@ -1122,14 +1219,14 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         jLabel24.setText("Nombres:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel24, gridBagConstraints);
 
         jLabel3.setText("Tel:");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 17;
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.gridheight = 2;
@@ -1149,14 +1246,14 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 17;
-        gridBagConstraints.gridwidth = 18;
+        gridBagConstraints.gridwidth = 19;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jtfTelefono, gridBagConstraints);
 
         jcbTipoDocumento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "NIT", "DUI", "Carnet Minoridad", "Otro" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 13;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridx = 17;
+        gridBagConstraints.gridy = 14;
         gridBagConstraints.gridwidth = 12;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jcbTipoDocumento, gridBagConstraints);
@@ -1174,7 +1271,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 19;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jtfNombre, gridBagConstraints);
@@ -1192,7 +1289,7 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 19;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jtfApellido, gridBagConstraints);
@@ -1202,15 +1299,15 @@ public class RecoleccionLeche extends javax.swing.JFrame {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 22;
+        gridBagConstraints.gridy = 25;
         gridBagConstraints.gridwidth = 28;
-        gridBagConstraints.gridheight = 7;
+        gridBagConstraints.gridheight = 5;
         jPanel13.add(jScrollPane2, gridBagConstraints);
 
         jLabel25.setText("Apellidos:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel25, gridBagConstraints);
@@ -1223,43 +1320,71 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
-        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 19;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jtfDocumento, gridBagConstraints);
 
-        jLabel26.setText("Documento:");
+        jLabel26.setText("Registro:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel26, gridBagConstraints);
 
         jLabel27.setText("Tipo:");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 9;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 14;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel27, gridBagConstraints);
 
-        jLabel4.setText("Direccion:");
+        jLabel4.setText("Dirección:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridy = 23;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel4, gridBagConstraints);
 
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
+        jLabel5.setText("Estado Civil:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 21;
+        gridBagConstraints.gridwidth = 10;
+        jPanel13.add(jLabel5, gridBagConstraints);
+
+        jcbECivil.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Casada", "Soltera", "Acompañada", "Divorciada" }));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridwidth = 19;
+        gridBagConstraints.gridheight = 3;
+        jPanel13.add(jcbECivil, gridBagConstraints);
+
+        jLabel10.setText("Número:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridheight = 2;
+        jPanel13.add(jLabel10, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridheight = 2;
+        jPanel13.add(jtfNumero, gridBagConstraints);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito1.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 30;
         gridBagConstraints.gridheight = 30;
-        jPanel13.add(jLabel10, gridBagConstraints);
+        jPanel13.add(jLabel15, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1819,6 +1944,11 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     String doc = jtfDocumento.getText();
     opr.runReporteDonantes("Donantes", archivo, doc);
 }//GEN-LAST:event_jbPrintActionPerformed
+
+    private void jbHistoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHistoriaActionPerformed
+        // TODO add your handling code here:
+        new Historia().setVisible(true);
+    }//GEN-LAST:event_jbHistoriaActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -1866,8 +1996,13 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1888,6 +2023,8 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1916,6 +2053,7 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private javax.swing.JButton jbEliminarDonante;
     private javax.swing.JButton jbExcel;
     private javax.swing.JButton jbGuardar;
+    private javax.swing.JButton jbHistoria;
     private javax.swing.JButton jbModificar;
     private javax.swing.JButton jbNuevaDonacion;
     private javax.swing.JButton jbNuevaDonante;
@@ -1923,6 +2061,7 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private org.freixas.jcalendar.JCalendarCombo jcFechaNac;
     private org.freixas.jcalendar.JCalendarCombo jcFechaObtDatos;
     private org.freixas.jcalendar.JCalendarCombo jcFechaParto;
+    private javax.swing.JComboBox jcbECivil;
     private javax.swing.JComboBox jcbSeleccionarBusquedaDonante;
     private javax.swing.JComboBox jcbTipoDocumento;
     private javax.swing.JEditorPane jepDireccion;
@@ -1951,7 +2090,13 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private javax.swing.JTextField jtfABuscar;
     private javax.swing.JTextField jtfApellido;
     private javax.swing.JTextField jtfDocumento;
+    private javax.swing.JTextField jtfEscolaridad;
+    private javax.swing.JTextField jtfHb;
+    private javax.swing.JTextField jtfHto;
+    private javax.swing.JTextField jtfNacionalidad;
     private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtfNumero;
+    private javax.swing.JTextField jtfOcupacion;
     private javax.swing.JTextField jtfTelefono;
     private javax.swing.JLabel label;
     private javax.swing.ButtonGroup tab;
