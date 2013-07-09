@@ -46,6 +46,13 @@ public class RecoleccionLeche extends javax.swing.JFrame {
     String etilis = "";
     String aptaDon = "";
     Date fechaObtDatos = null;
+    String nacionalidad = "";
+    String ocupacion = "";
+    String escolaridad = "";
+    int numero = 0;
+    String estadoCivil = "";
+    double hto = 0.0;
+    double hb = 0.0;
 
     /** Creates new form RecoleccionLeche */
     public RecoleccionLeche() {
@@ -369,6 +376,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 10;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel6, gridBagConstraints);
+
+        jtfNacionalidad.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 1;
@@ -383,6 +392,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel11, gridBagConstraints);
+
+        jtfOcupacion.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 4;
@@ -397,6 +408,8 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.gridheight = 2;
         jPanel5.add(jLabel12, gridBagConstraints);
+
+        jtfEscolaridad.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 7;
@@ -801,6 +814,13 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jLabel7, gridBagConstraints);
+
+        jtfHb.setEnabled(false);
+        jtfHb.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfHbKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 9;
@@ -815,6 +835,13 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 2;
         jPanel8.add(jLabel14, gridBagConstraints);
+
+        jtfHto.setEnabled(false);
+        jtfHto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfHtoKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
         gridBagConstraints.gridy = 9;
@@ -1371,6 +1398,13 @@ public class RecoleccionLeche extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.gridheight = 2;
         jPanel13.add(jLabel10, gridBagConstraints);
+
+        jtfNumero.setEnabled(false);
+        jtfNumero.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNumeroKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
@@ -1561,6 +1595,26 @@ private void jbNuevaDonacionActionPerformed(java.awt.event.ActionEvent evt) {//G
         Date f = new Date();
         jcFechaObtDatos.setDate(f);
 
+        numero = 0;
+        escolaridad = "";
+        ocupacion = "";
+        nacionalidad = "";
+        hb = 0.0;
+        hto = 0.0;
+        
+        jtfNumero.setText("");
+        jtfEscolaridad.setText("");
+        jtfOcupacion.setText("");
+        jtfNacionalidad.setText("");
+        jtfHb.setText("");
+        jtfHto.setText("");
+        
+        jtfNumero.setEnabled(enabled);
+        jtfEscolaridad.setEnabled(enabled);
+        jtfHb.setEnabled(enabled);
+        jtfHto.setEnabled(enabled);
+        jtfNacionalidad.setEnabled(enabled);
+        jtfOcupacion.setEnabled(enabled);
 
     }
 
@@ -1670,6 +1724,15 @@ private void jbAbrirInfoDonanteActionPerformed(java.awt.event.ActionEvent evt) {
 }//GEN-LAST:event_jbAbrirInfoDonanteActionPerformed
 
     public void asigancion() {
+        try{
+        numero = Integer.parseInt(jtfNumero.getText());
+        nacionalidad = jtfNacionalidad.getText();
+        ocupacion = jtfOcupacion.getText();
+        escolaridad = jtfEscolaridad.getText();
+        hb = Double.parseDouble(jtfHb.getText());
+        hto = Double.parseDouble(jtfHto.getText());
+        estadoCivil = jcbECivil.getSelectedItem().toString();
+        
         nombre = jtfNombre.getText();
         apellido = jtfApellido.getText();
         documento = jtfDocumento.getText() + " (" + jcbTipoDocumento.getSelectedItem() + ")";
@@ -1679,6 +1742,9 @@ private void jbAbrirInfoDonanteActionPerformed(java.awt.event.ActionEvent evt) {
         peso = jsPeso.getValue().toString();
         estatura = jsEstatura.getValue().toString();
         semGest = jsSGest.getValue().toString();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(rootPane, "¡Error al Ingresar Datos!");
+        }
 
     }
 
@@ -1910,7 +1976,8 @@ private void jrbAptaNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 
 private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
     // TODO add your handling code here:
-    if (jtfNombre.getText().equals("") || jtfApellido.getText().equals("") || jtfDocumento.getText().equals("") || jtfDocumento.getText().equals("") || jtfTelefono.getText().equals("")) {
+    if (jtfNombre.getText().equals("") || jtfNumero.getText().equals("") ||
+        jtfApellido.getText().equals("") || jtfDocumento.getText().equals("") || jtfTelefono.getText().equals("")) {
         JOptionPane.showMessageDialog(null, "¡Por favor, complete los datos de la donante!");
     } else {
         asigancion();
@@ -1949,6 +2016,28 @@ private void jbPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
         // TODO add your handling code here:
         new Historia().setVisible(true);
     }//GEN-LAST:event_jbHistoriaActionPerformed
+
+    private void jtfNumeroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumeroKeyTyped
+        // TODO add your handling code here:
+        if(!Character.isDigit(evt.getKeyChar())){
+            evt.consume();
+        }
+            
+    }//GEN-LAST:event_jtfNumeroKeyTyped
+
+    private void jtfHbKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfHbKeyTyped
+        // TODO add your handling code here:
+         if(!Character.isDigit(evt.getKeyChar()) && evt.getKeyChar() != '.'){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfHbKeyTyped
+
+    private void jtfHtoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfHtoKeyTyped
+        // TODO add your handling code here:
+          if(!Character.isDigit(evt.getKeyChar()) && evt.getKeyChar() != '.'){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfHtoKeyTyped
     /**
      * @param args the command line arguments
      */
