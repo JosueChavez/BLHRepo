@@ -100,6 +100,13 @@ public class OperacionesDonacion {
                 donante.setEtilismo(resultado.getString("Etilismo"));
                 donante.setAptaDonar(resultado.getString("AptaDonar"));
                 donante.setFechaObtencion(resultado.getDate("FechaObtDatos"));
+                donante.setNacionalidad(resultado.getString("nacionalidad"));
+                donante.setOcupacion(resultado.getString("ocupacion"));
+                donante.setEscolaridad(resultado.getString("escolaridad"));
+                donante.setNumero(resultado.getInt("numero"));
+                donante.setEstadoCivil(resultado.getString("estadoCivil"));
+                donante.setHto(resultado.getDouble("hto"));
+                donante.setHb(resultado.getDouble("hb"));
                 valor++;
             }
             sentencia = con.conectar().createStatement();
@@ -125,7 +132,7 @@ public class OperacionesDonacion {
             Date fechaNac = new Date(donante.getFechaNac().getTime());
             Date fechaParto = new Date(donante.getFechaParto().getTime());
             Date fechaObtDatos = new Date(donante.getFechaObtencion().getTime());
-            PreparedStatement sentencia = con.conectar().prepareStatement("INSERT INTO Persona (Documento,Nombres,Apellidos,FechaNac,Peso,Estatura,Direccion,SemGesta,FechaParto,vdrl,hbsag,hiv,TransSangui,Tabaquismo,Etilismo,AptaDonar,FechaObtDatos) VALUES ('" + donante.getDocumento() + "','" + donante.getNombre() + "','" + donante.getApellido() + "','" + fechaNac + "','" + donante.getPeso() + "','" + donante.getEstatura() + "','" + donante.getDireccion() + "','" + donante.getSemGest() + "','" + fechaParto + "','" + donante.getVDRL() + "','" + donante.getHbsAg() + "','" + donante.getHIV() + "','" + donante.getTransSangui() + "','" + donante.getTabaquismo() + "','" + donante.getEtilismo() + "','" + donante.getAptaDonar() + "','" + fechaObtDatos + "')");
+            PreparedStatement sentencia = con.conectar().prepareStatement("INSERT INTO Persona (Documento,Nombres,Apellidos,FechaNac,Peso,Estatura,Direccion,SemGesta,FechaParto,vdrl,hbsag,hiv,TransSangui,Tabaquismo,Etilismo,AptaDonar,FechaObtDatos,nacionalidad,ocupacion,escolaridad,numero,estadoCivil,hto,hb) VALUES ('" + donante.getDocumento() + "','" + donante.getNombre() + "','" + donante.getApellido() + "','" + fechaNac + "','" + donante.getPeso() + "','" + donante.getEstatura() + "','" + donante.getDireccion() + "','" + donante.getSemGest() + "','" + fechaParto + "','" + donante.getVDRL() + "','" + donante.getHbsAg() + "','" + donante.getHIV() + "','" + donante.getTransSangui() + "','" + donante.getTabaquismo() + "','" + donante.getEtilismo() + "','" + donante.getAptaDonar() + "','" + fechaObtDatos + "','"+ donante.getNacionalidad() + "','"+donante.getOcupacion() + "','"+donante.getEscolaridad() + "','"+donante.getNumero() + "','"+donante.getEstadoCivil() + "','"+donante.getHto()+"','"+donante.getHb()+"')");
             sentencia.executeUpdate();
             sentencia = con.conectar().prepareStatement("INSERT INTO TelefonoPersona (NoTel,TipoTelefono,Documento) VALUES ('" + donante.getTel() + "','Fijo','" + donante.getDocumento() + "')");
             sentencia.executeUpdate();
@@ -143,7 +150,7 @@ public class OperacionesDonacion {
             Date fechaNac = new Date(donante.getFechaNac().getTime());
             Date fechaParto = new Date(donante.getFechaParto().getTime());
             Date fechaObtDatos = new Date(donante.getFechaObtencion().getTime());
-            PreparedStatement sentencia = con.conectar().prepareStatement("UPDATE Persona SET Nombres = '" + donante.getNombre() + "',Apellidos ='" + donante.getApellido() + "',FechaNac = '" + fechaNac + "',Peso ='" + donante.getPeso() + "',Estatura ='" + donante.getEstatura() + "',Direccion ='" + donante.getDireccion() + "',SemGesta='" + donante.getSemGest() + "',FechaParto ='" + fechaParto + "',vdrl ='" + donante.getVDRL() + "',hbsag ='" + donante.getHbsAg() + "',hiv ='" + donante.getHIV() + "',TransSangui ='" + donante.getTransSangui() + "',Tabaquismo ='" + donante.getTabaquismo() + "',Etilismo ='" + donante.getEtilismo() + "',AptaDonar ='" + donante.getAptaDonar() + "',FechaObtDatos ='" + fechaObtDatos + "' WHERE Documento ='" + donante.getDocumento() + "'");
+            PreparedStatement sentencia = con.conectar().prepareStatement("UPDATE Persona SET Nombres = '" + donante.getNombre() + "',Apellidos ='" + donante.getApellido() + "',FechaNac = '" + fechaNac + "',Peso ='" + donante.getPeso() + "',Estatura ='" + donante.getEstatura() + "',Direccion ='" + donante.getDireccion() + "',SemGesta='" + donante.getSemGest() + "',FechaParto ='" + fechaParto + "',vdrl ='" + donante.getVDRL() + "',hbsag ='" + donante.getHbsAg() + "',hiv ='" + donante.getHIV() + "',TransSangui ='" + donante.getTransSangui() + "',Tabaquismo ='" + donante.getTabaquismo() + "',Etilismo ='" + donante.getEtilismo() + "',AptaDonar ='" + donante.getAptaDonar() + "',FechaObtDatos ='" + fechaObtDatos + "',nacionalidad ='"+donante.getNacionalidad()+"',ocupacion ='"+donante.getOcupacion()+"',escolaridad ='"+donante.getEscolaridad()+"',numero ='"+donante.getNumero()+"',estadoCivil ='"+donante.getEstadoCivil()+"',hto='"+donante.getHto()+"',hb='"+donante.getHb()+"' WHERE Documento ='" + donante.getDocumento() + "'");
             sentencia.executeUpdate();
             JOptionPane.showMessageDialog(null, "¡Datos Modificados!");
         } catch (Exception ex) {

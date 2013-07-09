@@ -1631,8 +1631,32 @@ private void jbNuevaDonacionActionPerformed(java.awt.event.ActionEvent evt) {//G
     }
 
     public void enviarDatos() {
+        try{
         Donante donante = new Donante();
         donante = opD.listarInfoDonante(jtDonantes.getValueAt(jtDonantes.getSelectedRow(), 0).toString());
+        
+        jtfNacionalidad.setText(donante.getNacionalidad());
+        jtfOcupacion.setText(donante.getOcupacion());
+        jtfEscolaridad.setText(donante.getEscolaridad());
+        jtfNumero.setText(String.valueOf(donante.getNumero()));
+        //JOptionPane.showMessageDialog(rootPane, donante.getEstadoCivil());
+       try{        
+       if(donante.getEstadoCivil().equals("Casada")==true){
+           jcbECivil.setSelectedIndex(0);
+       }else if(donante.getEstadoCivil().equals("Acompañada")==true){
+           jcbECivil.setSelectedIndex(2);
+       }else if(donante.getEstadoCivil().equals("Divorciada")==true){
+           jcbECivil.setSelectedIndex(3);
+       }else if(donante.getEstadoCivil().equals("Soltera")==true){
+           jcbECivil.setSelectedIndex(1);
+       }
+       }catch(Exception e){
+           
+       }
+       jtfHto.setText(String.valueOf(donante.getHto()));
+       jtfHb.setText(String.valueOf(donante.getHb()));
+        
+        
         jtfDocumento.setText(donante.getDocumento());
         jtfNombre.setText(donante.getNombre());
         jtfApellido.setText(donante.getApellido());
@@ -1705,7 +1729,11 @@ private void jbNuevaDonacionActionPerformed(java.awt.event.ActionEvent evt) {//G
         }
         opD.listarDonanciones(jtDonaciones, donante.getDocumento());
 
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
     }
+        
 
 private void jbAbrirInfoDonanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAbrirInfoDonanteActionPerformed
     if (jtDonantes.getSelectedRow() == -1) {
@@ -1749,6 +1777,15 @@ private void jbAbrirInfoDonanteActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
     public void asigancion2() {
+        try{
+        numero = Integer.parseInt(jtfNumero.getText());
+        nacionalidad = jtfNacionalidad.getText();
+        ocupacion = jtfOcupacion.getText();
+        escolaridad = jtfEscolaridad.getText();
+        hb = Double.parseDouble(jtfHb.getText());
+        hto = Double.parseDouble(jtfHto.getText());
+        estadoCivil = jcbECivil.getSelectedItem().toString();
+        
         nombre = jtfNombre.getText();
         apellido = jtfApellido.getText();
         documento = jtfDocumento.getText();
@@ -1758,7 +1795,9 @@ private void jbAbrirInfoDonanteActionPerformed(java.awt.event.ActionEvent evt) {
         peso = jsPeso.getValue().toString();
         estatura = jsEstatura.getValue().toString();
         semGest = jsSGest.getValue().toString();
-
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(rootPane, "¡Error al Ingresar Datos!");
+        }
     }
 private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
     // TODO add your handling code here:
@@ -1981,7 +2020,7 @@ private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         JOptionPane.showMessageDialog(null, "¡Por favor, complete los datos de la donante!");
     } else {
         asigancion();
-        Donante dte = new Donante(documento, nombre, apellido, fechaNac, direccion, peso, estatura, telefono, semGest, fechaParto, vdrl, hbsag, hiv, transSang, tabaq, etilis, aptaDon, fechaObtDatos);
+        Donante dte = new Donante(documento, nombre, apellido, fechaNac, direccion, peso, estatura, telefono, semGest, fechaParto, vdrl, hbsag, hiv, transSang, tabaq, etilis, aptaDon, fechaObtDatos,nacionalidad,ocupacion,escolaridad,numero,estadoCivil,hto,hb);
         opD.almacenarInfoDonante(dte);
     }
     opD.listarDonantes(jtDonantes);
@@ -1996,9 +2035,10 @@ private void jbModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             JOptionPane.showMessageDialog(this, "Debe seleccionar primero una donante", "Error.", JOptionPane.ERROR_MESSAGE);
         } else {
             asigancion2();
-            Donante dte = new Donante(documento, nombre, apellido, fechaNac, direccion, peso, estatura, telefono, semGest, fechaParto, vdrl, hbsag, hiv, transSang, tabaq, etilis, aptaDon, fechaObtDatos);
+            Donante dte = new Donante(documento, nombre, apellido, fechaNac, direccion, peso, estatura, telefono, semGest, fechaParto, vdrl, hbsag, hiv, transSang, tabaq, etilis, aptaDon, fechaObtDatos,nacionalidad,ocupacion,escolaridad,numero,estadoCivil,hto,hb);
             opD.modificarInfoDonante(dte);
         }
+        opD.listarDonantes(jtDonantes);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(rootPane, "Error al modificar!");
     }

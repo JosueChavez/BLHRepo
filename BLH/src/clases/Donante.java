@@ -30,8 +30,23 @@ public class Donante {
     private String etilismo;
     private String aptaDonar;
     private Date fechaObtencion;
+    
+    private String nacionalidad;
+    private String ocupacion;
+    private String escolaridad;
+    private int numero;
+    private String estadoCivil;
+    private double hto;
+    private double hb;
 
     public Donante() {
+        nacionalidad = "";
+        ocupacion = "";
+        escolaridad = "";
+        numero = 0;
+        estadoCivil = "";
+        hto = 0.0;
+        hb = 0.0;      
         documento = "";
         nombre = "";
         apellido = "";
@@ -52,7 +67,14 @@ public class Donante {
         fechaObtencion = null;
     }
 
-    public Donante(String documento, String nombre, String apellido, Date fechaNac, String direccion, String peso, String estatura, String tel, String semGest, Date fechaParto, String vdrl, String hbsag, String hiv, String transSan, String tabaq, String etil, String apta, Date fechaObt) {
+    public Donante(String documento, String nombre, String apellido, Date fechaNac, String direccion, String peso, String estatura, String tel, String semGest, Date fechaParto, String vdrl, String hbsag, String hiv, String transSan, String tabaq, String etil, String apta, Date fechaObt, String nacionalidad, String ocupacion, String escolaridad, int numero, String estadoCivil, double hto, double hb) {
+        this.nacionalidad = nacionalidad;
+        this.escolaridad = escolaridad;
+        this.ocupacion = ocupacion;
+        this.numero = numero;
+        this.estadoCivil = estadoCivil;
+        this.hb = hb;
+        this.hto = hto;
         this.documento = documento;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -323,5 +345,103 @@ public class Donante {
      */
     public void setFechaObtencion(Date fechaObtencion) {
         this.fechaObtencion = fechaObtencion;
+    }
+
+    /**
+     * @return the nacionalidad
+     */
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    /**
+     * @param nacionalidad the nacionalidad to set
+     */
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    /**
+     * @return the ocupacion
+     */
+    public String getOcupacion() {
+        return ocupacion;
+    }
+
+    /**
+     * @param ocupacion the ocupacion to set
+     */
+    public void setOcupacion(String ocupacion) {
+        this.ocupacion = ocupacion;
+    }
+
+    /**
+     * @return the escolaridad
+     */
+    public String getEscolaridad() {
+        return escolaridad;
+    }
+
+    /**
+     * @param escolaridad the escolaridad to set
+     */
+    public void setEscolaridad(String escolaridad) {
+        this.escolaridad = escolaridad;
+    }
+
+    /**
+     * @return the numero
+     */
+    public int getNumero() {
+        return numero;
+    }
+
+    /**
+     * @param numero the numero to set
+     */
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    /**
+     * @return the estadoCivil
+     */
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    /**
+     * @param estadoCivil the estadoCivil to set
+     */
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    /**
+     * @return the hto
+     */
+    public double getHto() {
+        return hto;
+    }
+
+    /**
+     * @param hto the hto to set
+     */
+    public void setHto(double hto) {
+        this.hto = hto;
+    }
+
+    /**
+     * @return the hb
+     */
+    public double getHb() {
+        return hb;
+    }
+
+    /**
+     * @param hb the hb to set
+     */
+    public void setHb(double hb) {
+        this.hb = hb;
     }
 }

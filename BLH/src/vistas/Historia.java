@@ -119,6 +119,7 @@ public class Historia extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Historia Donadora - Banco de Leche Humana");
         setIconImage(getIconImage());
+        setResizable(false);
 
         net.java.dev.koalalayout.KoalaLayout koalaLayout1 = new net.java.dev.koalalayout.KoalaLayout();
         koalaLayout1.setGridheight(30);
