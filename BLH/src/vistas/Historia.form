@@ -20,6 +20,16 @@
         </Menu>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.ButtonGroup" name="control">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="parto">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="embarazo">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="medicamentos">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="toxicos">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar2">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu3">
@@ -97,6 +107,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfG">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfGFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfGKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -104,6 +118,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfP2">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfP2FocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfP2KeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -111,6 +129,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfA">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfAFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfAKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
@@ -118,13 +140,21 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfP1">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfP1FocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfP1KeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="V:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="jtfV">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfVFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfVKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
@@ -132,6 +162,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfM">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfMFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfMKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
@@ -139,6 +173,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfPeriodo">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfPeriodoFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfPeriodoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
@@ -146,6 +184,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfAmenorrea">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfAmenorreaFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfAmenorreaKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
@@ -154,13 +196,25 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton1">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="control"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="SI"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton2">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="control"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NO"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
@@ -168,6 +222,12 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfLugar">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfLugarFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
@@ -175,6 +235,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfNumero">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfNumeroFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfNumeroKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
@@ -182,6 +246,9 @@
               </Properties>
             </Component>
             <Component class="org.freixas.jcalendar.JCalendarCombo" name="jcFechaParto">
+              <Events>
+                <EventHandler event="dateChanged" listener="org.freixas.jcalendar.DateListener" parameters="org.freixas.jcalendar.DateEvent" handler="jcFechaPartoDateChanged"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
@@ -190,13 +257,25 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton3">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="parto"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="SI"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton4">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="parto"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NO"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
@@ -204,16 +283,34 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfPatologia">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfPatologiaFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton5">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="embarazo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="SI"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton6">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="embarazo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NO"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel17">
               <Properties>
@@ -221,6 +318,12 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfParto">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfPartoFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel22">
               <Properties>
@@ -233,15 +336,28 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextField1FocusLost"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel30">
+            <Component class="javax.swing.JLabel" name="jLabel25">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Documento:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jlDocumento">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="73"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel32">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagenes/fondos/fondito2.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel31">
+            <Component class="javax.swing.JLabel" name="jLabel33">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagenes/fondos/fondito2.png"/>
@@ -1066,11 +1182,11 @@
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="60_jTextField4">
-                  <CodeVariable name="jTextField4" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="60_jtfV">
+                  <CodeVariable name="jtfV" type="8194" declaredType="javax.swing.JTextField"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jTextField4"/>
+                      <ComponentRef name="jtfV"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -1974,7 +2090,7 @@
               <Parameters>
                 <CodeExpression id="126">
                   <ExpressionOrigin>
-                    <Value type="int" value="17"/>
+                    <Value type="int" value="16"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -2056,7 +2172,7 @@
               <Parameters>
                 <CodeExpression id="132">
                   <ExpressionOrigin>
-                    <Value type="int" value="19"/>
+                    <Value type="int" value="18"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3230,7 +3346,7 @@
               <Parameters>
                 <CodeExpression id="218">
                   <ExpressionOrigin>
-                    <Value type="int" value="5"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3286,7 +3402,7 @@
               <Parameters>
                 <CodeExpression id="222">
                   <ExpressionOrigin>
-                    <Value type="int" value="11"/>
+                    <Value type="int" value="13"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3299,7 +3415,7 @@
               <Parameters>
                 <CodeExpression id="223">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3312,7 +3428,7 @@
               <Parameters>
                 <CodeExpression id="224">
                   <ExpressionOrigin>
-                    <Value type="int" value="11"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3325,7 +3441,7 @@
               <Parameters>
                 <CodeExpression id="225">
                   <ExpressionOrigin>
-                    <Value type="int" value="20"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3336,11 +3452,11 @@
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="226_jLabel30">
-                  <CodeVariable name="jLabel30" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="226_jLabel25">
+                  <CodeVariable name="jLabel25" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel30"/>
+                      <ComponentRef name="jLabel25"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -3368,7 +3484,7 @@
               <Parameters>
                 <CodeExpression id="228">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="16"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3381,7 +3497,7 @@
               <Parameters>
                 <CodeExpression id="229">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3394,7 +3510,7 @@
               <Parameters>
                 <CodeExpression id="230">
                   <ExpressionOrigin>
-                    <Value type="int" value="11"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3407,6 +3523,88 @@
               <Parameters>
                 <CodeExpression id="231">
                   <ExpressionOrigin>
+                    <Value type="int" value="2"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="4_jPanel2"/>
+              <StatementProvider type="CodeMethod">
+                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="232_jlDocumento">
+                  <CodeVariable name="jlDocumento" type="8265" declaredType="javax.swing.JLabel"/>
+                  <ExpressionOrigin>
+                    <ExpressionProvider type="ComponentRef">
+                      <ComponentRef name="jlDocumento"/>
+                    </ExpressionProvider>
+                  </ExpressionOrigin>
+                </CodeExpression>
+                <CodeExpression id="227_gridBagConstraints"/>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="233_gridBagConstraints">
+                <CodeVariable name="gridBagConstraints"/>
+                <ExpressionOrigin>
+                  <ExpressionProvider type="CodeConstructor">
+                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                  </ExpressionProvider>
+                </ExpressionOrigin>
+              </CodeExpression>
+              <StatementProvider type="CodeExpression">
+                <CodeExpression id="233_gridBagConstraints"/>
+              </StatementProvider>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="233_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="234">
+                  <ExpressionOrigin>
+                    <Value type="int" value="11"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="233_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="235">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="233_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="236">
+                  <ExpressionOrigin>
+                    <Value type="int" value="11"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="233_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="237">
+                  <ExpressionOrigin>
                     <Value type="int" value="20"/>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -3418,15 +3616,97 @@
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="232_jLabel31">
-                  <CodeVariable name="jLabel31" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="238_jLabel32">
+                  <CodeVariable name="jLabel32" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel31"/>
+                      <ComponentRef name="jLabel32"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
-                <CodeExpression id="227_gridBagConstraints"/>
+                <CodeExpression id="233_gridBagConstraints"/>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="239_gridBagConstraints">
+                <CodeVariable name="gridBagConstraints"/>
+                <ExpressionOrigin>
+                  <ExpressionProvider type="CodeConstructor">
+                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                  </ExpressionProvider>
+                </ExpressionOrigin>
+              </CodeExpression>
+              <StatementProvider type="CodeExpression">
+                <CodeExpression id="239_gridBagConstraints"/>
+              </StatementProvider>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="239_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="240">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="239_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="241">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="239_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="242">
+                  <ExpressionOrigin>
+                    <Value type="int" value="11"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="239_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="243">
+                  <ExpressionOrigin>
+                    <Value type="int" value="20"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="4_jPanel2"/>
+              <StatementProvider type="CodeMethod">
+                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="244_jLabel33">
+                  <CodeVariable name="jLabel33" type="8194" declaredType="javax.swing.JLabel"/>
+                  <ExpressionOrigin>
+                    <ExpressionProvider type="ComponentRef">
+                      <ComponentRef name="jLabel33"/>
+                    </ExpressionProvider>
+                  </ExpressionOrigin>
+                </CodeExpression>
+                <CodeExpression id="239_gridBagConstraints"/>
               </Parameters>
             </CodeStatement>
           </LayoutCode>
@@ -3447,13 +3727,25 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton7">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="medicamentos"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="SI"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton7ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton8">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="medicamentos"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NO"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton8ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
               <Properties>
@@ -3467,13 +3759,25 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton9">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="toxicos"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="SI"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton9ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton10">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="toxicos"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="NO"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton10ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel21">
               <Properties>
@@ -3486,6 +3790,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfObs">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfObsFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel23">
               <Properties>
@@ -3493,6 +3800,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfPatologiaEntrevista">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfPatologiaEntrevistaFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel24">
               <Properties>
@@ -3500,11 +3810,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMotivo">
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfMotivoFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Aceptar"/>
+                <Property name="text" type="java.lang.String" value="Almacenar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
@@ -3512,8 +3828,20 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfToxicos">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfToxicosFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jtfMedicamentos">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfMedicamentosFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
@@ -3532,7 +3860,7 @@
           </SubComponents>
           <LayoutCode>
             <CodeStatement>
-              <CodeExpression id="233_koalaLayout3">
+              <CodeExpression id="245_koalaLayout3">
                 <CodeVariable name="koalaLayout3" type="4096" declaredType="net.java.dev.koalalayout.KoalaLayout"/>
                 <ExpressionOrigin>
                   <ExpressionProvider type="CodeConstructor">
@@ -3541,16 +3869,16 @@
                 </ExpressionOrigin>
               </CodeExpression>
               <StatementProvider type="CodeExpression">
-                <CodeExpression id="233_koalaLayout3"/>
+                <CodeExpression id="245_koalaLayout3"/>
               </StatementProvider>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="233_koalaLayout3"/>
+              <CodeExpression id="245_koalaLayout3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="setGridheight" class="net.java.dev.koalalayout.KoalaLayout" parameterTypes="int"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="234">
+                <CodeExpression id="246">
                   <ExpressionOrigin>
                     <Value type="int" value="20"/>
                   </ExpressionOrigin>
@@ -3558,12 +3886,12 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="233_koalaLayout3"/>
+              <CodeExpression id="245_koalaLayout3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="setGridwidth" class="net.java.dev.koalalayout.KoalaLayout" parameterTypes="int"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="235">
+                <CodeExpression id="247">
                   <ExpressionOrigin>
                     <Value type="int" value="20"/>
                   </ExpressionOrigin>
@@ -3571,7 +3899,7 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3">
+              <CodeExpression id="248_jPanel3">
                 <CodeVariable name="jPanel3" type="8194" declaredType="javax.swing.JPanel"/>
                 <ExpressionOrigin>
                   <ExpressionProvider type="ComponentRef">
@@ -3583,171 +3911,7 @@
                 <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="233_koalaLayout3"/>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="237_gridBagConstraints">
-                <CodeVariable name="gridBagConstraints"/>
-                <ExpressionOrigin>
-                  <ExpressionProvider type="CodeConstructor">
-                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
-                  </ExpressionProvider>
-                </ExpressionOrigin>
-              </CodeExpression>
-              <StatementProvider type="CodeExpression">
-                <CodeExpression id="237_gridBagConstraints"/>
-              </StatementProvider>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="237_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="238">
-                  <ExpressionOrigin>
-                    <Value type="int" value="0"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="237_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="239">
-                  <ExpressionOrigin>
-                    <Value type="int" value="4"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="237_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="240">
-                  <ExpressionOrigin>
-                    <Value type="int" value="3"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="237_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="241">
-                  <ExpressionOrigin>
-                    <Value type="int" value="2"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
-              <StatementProvider type="CodeMethod">
-                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="242_jLabel18">
-                  <CodeVariable name="jLabel18" type="8194" declaredType="javax.swing.JLabel"/>
-                  <ExpressionOrigin>
-                    <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel18"/>
-                    </ExpressionProvider>
-                  </ExpressionOrigin>
-                </CodeExpression>
-                <CodeExpression id="237_gridBagConstraints"/>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="243_gridBagConstraints">
-                <CodeVariable name="gridBagConstraints"/>
-                <ExpressionOrigin>
-                  <ExpressionProvider type="CodeConstructor">
-                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
-                  </ExpressionProvider>
-                </ExpressionOrigin>
-              </CodeExpression>
-              <StatementProvider type="CodeExpression">
-                <CodeExpression id="243_gridBagConstraints"/>
-              </StatementProvider>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="243_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="244">
-                  <ExpressionOrigin>
-                    <Value type="int" value="4"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="243_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="245">
-                  <ExpressionOrigin>
-                    <Value type="int" value="0"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="243_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="246">
-                  <ExpressionOrigin>
-                    <Value type="int" value="2"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="243_gridBagConstraints"/>
-              <StatementProvider type="CodeField">
-                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="247">
-                  <ExpressionOrigin>
-                    <Value type="int" value="3"/>
-                  </ExpressionOrigin>
-                </CodeExpression>
-              </Parameters>
-            </CodeStatement>
-            <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
-              <StatementProvider type="CodeMethod">
-                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
-              </StatementProvider>
-              <Parameters>
-                <CodeExpression id="248_jRadioButton7">
-                  <CodeVariable name="jRadioButton7" type="8194" declaredType="javax.swing.JRadioButton"/>
-                  <ExpressionOrigin>
-                    <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jRadioButton7"/>
-                    </ExpressionProvider>
-                  </ExpressionOrigin>
-                </CodeExpression>
-                <CodeExpression id="243_gridBagConstraints"/>
+                <CodeExpression id="245_koalaLayout3"/>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
@@ -3771,7 +3935,7 @@
               <Parameters>
                 <CodeExpression id="250">
                   <ExpressionOrigin>
-                    <Value type="int" value="6"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3784,7 +3948,7 @@
               <Parameters>
                 <CodeExpression id="251">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3797,7 +3961,7 @@
               <Parameters>
                 <CodeExpression id="252">
                   <ExpressionOrigin>
-                    <Value type="int" value="2"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3810,22 +3974,22 @@
               <Parameters>
                 <CodeExpression id="253">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="254_jRadioButton8">
-                  <CodeVariable name="jRadioButton8" type="8194" declaredType="javax.swing.JRadioButton"/>
+                <CodeExpression id="254_jLabel18">
+                  <CodeVariable name="jLabel18" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jRadioButton8"/>
+                      <ComponentRef name="jLabel18"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -3853,7 +4017,7 @@
               <Parameters>
                 <CodeExpression id="256">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3866,7 +4030,7 @@
               <Parameters>
                 <CodeExpression id="257">
                   <ExpressionOrigin>
-                    <Value type="int" value="4"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3879,7 +4043,7 @@
               <Parameters>
                 <CodeExpression id="258">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3892,22 +4056,22 @@
               <Parameters>
                 <CodeExpression id="259">
                   <ExpressionOrigin>
-                    <Value type="int" value="2"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="260_jLabel19">
-                  <CodeVariable name="jLabel19" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="260_jRadioButton7">
+                  <CodeVariable name="jRadioButton7" type="8194" declaredType="javax.swing.JRadioButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel19"/>
+                      <ComponentRef name="jRadioButton7"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -3935,7 +4099,7 @@
               <Parameters>
                 <CodeExpression id="262">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="6"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3961,7 +4125,7 @@
               <Parameters>
                 <CodeExpression id="264">
                   <ExpressionOrigin>
-                    <Value type="int" value="4"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -3980,16 +4144,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="266_jLabel20">
-                  <CodeVariable name="jLabel20" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="266_jRadioButton8">
+                  <CodeVariable name="jRadioButton8" type="8194" declaredType="javax.swing.JRadioButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel20"/>
+                      <ComponentRef name="jRadioButton8"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4017,7 +4181,7 @@
               <Parameters>
                 <CodeExpression id="268">
                   <ExpressionOrigin>
-                    <Value type="int" value="4"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4043,7 +4207,7 @@
               <Parameters>
                 <CodeExpression id="270">
                   <ExpressionOrigin>
-                    <Value type="int" value="2"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4062,16 +4226,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="272_jRadioButton9">
-                  <CodeVariable name="jRadioButton9" type="8194" declaredType="javax.swing.JRadioButton"/>
+                <CodeExpression id="272_jLabel19">
+                  <CodeVariable name="jLabel19" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jRadioButton9"/>
+                      <ComponentRef name="jLabel19"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4099,7 +4263,7 @@
               <Parameters>
                 <CodeExpression id="274">
                   <ExpressionOrigin>
-                    <Value type="int" value="6"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4112,7 +4276,7 @@
               <Parameters>
                 <CodeExpression id="275">
                   <ExpressionOrigin>
-                    <Value type="int" value="4"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4125,7 +4289,7 @@
               <Parameters>
                 <CodeExpression id="276">
                   <ExpressionOrigin>
-                    <Value type="int" value="2"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4138,22 +4302,22 @@
               <Parameters>
                 <CodeExpression id="277">
                   <ExpressionOrigin>
-                    <Value type="int" value="2"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="278_jRadioButton10">
-                  <CodeVariable name="jRadioButton10" type="8194" declaredType="javax.swing.JRadioButton"/>
+                <CodeExpression id="278_jLabel20">
+                  <CodeVariable name="jLabel20" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jRadioButton10"/>
+                      <ComponentRef name="jLabel20"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4181,7 +4345,7 @@
               <Parameters>
                 <CodeExpression id="280">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4194,7 +4358,7 @@
               <Parameters>
                 <CodeExpression id="281">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4207,7 +4371,7 @@
               <Parameters>
                 <CodeExpression id="282">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4220,22 +4384,22 @@
               <Parameters>
                 <CodeExpression id="283">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="284_jLabel21">
-                  <CodeVariable name="jLabel21" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="284_jRadioButton9">
+                  <CodeVariable name="jRadioButton9" type="8194" declaredType="javax.swing.JRadioButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel21"/>
+                      <ComponentRef name="jRadioButton9"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4263,7 +4427,7 @@
               <Parameters>
                 <CodeExpression id="286">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="6"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4276,7 +4440,7 @@
               <Parameters>
                 <CodeExpression id="287">
                   <ExpressionOrigin>
-                    <Value type="int" value="13"/>
+                    <Value type="int" value="4"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4289,7 +4453,7 @@
               <Parameters>
                 <CodeExpression id="288">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4302,22 +4466,22 @@
               <Parameters>
                 <CodeExpression id="289">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="2"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="290_jLabel16">
-                  <CodeVariable name="jLabel16" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="290_jRadioButton10">
+                  <CodeVariable name="jRadioButton10" type="8194" declaredType="javax.swing.JRadioButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel16"/>
+                      <ComponentRef name="jRadioButton10"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4358,7 +4522,7 @@
               <Parameters>
                 <CodeExpression id="293">
                   <ExpressionOrigin>
-                    <Value type="int" value="13"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4371,7 +4535,7 @@
               <Parameters>
                 <CodeExpression id="294">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4390,16 +4554,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="296_jtfObs">
-                  <CodeVariable name="jtfObs" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="296_jLabel21">
+                  <CodeVariable name="jLabel21" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jtfObs"/>
+                      <ComponentRef name="jLabel21"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4440,7 +4604,7 @@
               <Parameters>
                 <CodeExpression id="299">
                   <ExpressionOrigin>
-                    <Value type="int" value="7"/>
+                    <Value type="int" value="13"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4472,16 +4636,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="302_jLabel23">
-                  <CodeVariable name="jLabel23" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="302_jLabel16">
+                  <CodeVariable name="jLabel16" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel23"/>
+                      <ComponentRef name="jLabel16"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4522,7 +4686,7 @@
               <Parameters>
                 <CodeExpression id="305">
                   <ExpressionOrigin>
-                    <Value type="int" value="7"/>
+                    <Value type="int" value="13"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4554,16 +4718,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="308_jtfPatologiaEntrevista">
-                  <CodeVariable name="jtfPatologiaEntrevista" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="308_jtfObs">
+                  <CodeVariable name="jtfObs" type="8194" declaredType="javax.swing.JTextField"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jtfPatologiaEntrevista"/>
+                      <ComponentRef name="jtfObs"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4604,7 +4768,7 @@
               <Parameters>
                 <CodeExpression id="311">
                   <ExpressionOrigin>
-                    <Value type="int" value="10"/>
+                    <Value type="int" value="7"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4636,16 +4800,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="314_jLabel24">
-                  <CodeVariable name="jLabel24" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="314_jLabel23">
+                  <CodeVariable name="jLabel23" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel24"/>
+                      <ComponentRef name="jLabel23"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4686,7 +4850,7 @@
               <Parameters>
                 <CodeExpression id="317">
                   <ExpressionOrigin>
-                    <Value type="int" value="10"/>
+                    <Value type="int" value="7"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4718,16 +4882,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="320_jtfMotivo">
-                  <CodeVariable name="jtfMotivo" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="320_jtfPatologiaEntrevista">
+                  <CodeVariable name="jtfPatologiaEntrevista" type="8194" declaredType="javax.swing.JTextField"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jtfMotivo"/>
+                      <ComponentRef name="jtfPatologiaEntrevista"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4755,7 +4919,7 @@
               <Parameters>
                 <CodeExpression id="322">
                   <ExpressionOrigin>
-                    <Value type="int" value="14"/>
+                    <Value type="int" value="0"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4768,7 +4932,7 @@
               <Parameters>
                 <CodeExpression id="323">
                   <ExpressionOrigin>
-                    <Value type="int" value="17"/>
+                    <Value type="int" value="10"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4781,7 +4945,7 @@
               <Parameters>
                 <CodeExpression id="324">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4800,16 +4964,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="326_jButton1">
-                  <CodeVariable name="jButton1" type="8194" declaredType="javax.swing.JButton"/>
+                <CodeExpression id="326_jLabel24">
+                  <CodeVariable name="jLabel24" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jButton1"/>
+                      <ComponentRef name="jLabel24"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4837,7 +5001,7 @@
               <Parameters>
                 <CodeExpression id="328">
                   <ExpressionOrigin>
-                    <Value type="int" value="17"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4850,7 +5014,7 @@
               <Parameters>
                 <CodeExpression id="329">
                   <ExpressionOrigin>
-                    <Value type="int" value="17"/>
+                    <Value type="int" value="10"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4863,7 +5027,7 @@
               <Parameters>
                 <CodeExpression id="330">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4882,16 +5046,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="332_jButton2">
-                  <CodeVariable name="jButton2" type="8194" declaredType="javax.swing.JButton"/>
+                <CodeExpression id="332_jtfMotivo">
+                  <CodeVariable name="jtfMotivo" type="8194" declaredType="javax.swing.JTextField"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jButton2"/>
+                      <ComponentRef name="jtfMotivo"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -4919,7 +5083,7 @@
               <Parameters>
                 <CodeExpression id="334">
                   <ExpressionOrigin>
-                    <Value type="int" value="11"/>
+                    <Value type="int" value="14"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4932,7 +5096,7 @@
               <Parameters>
                 <CodeExpression id="335">
                   <ExpressionOrigin>
-                    <Value type="int" value="3"/>
+                    <Value type="int" value="17"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4945,7 +5109,7 @@
               <Parameters>
                 <CodeExpression id="336">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -4964,16 +5128,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="338_jtfToxicos">
-                  <CodeVariable name="jtfToxicos" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="338_jButton1">
+                  <CodeVariable name="jButton1" type="8194" declaredType="javax.swing.JButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jtfToxicos"/>
+                      <ComponentRef name="jButton1"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -5001,7 +5165,7 @@
               <Parameters>
                 <CodeExpression id="340">
                   <ExpressionOrigin>
-                    <Value type="int" value="11"/>
+                    <Value type="int" value="17"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5014,7 +5178,7 @@
               <Parameters>
                 <CodeExpression id="341">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="17"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5027,7 +5191,7 @@
               <Parameters>
                 <CodeExpression id="342">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5046,16 +5210,16 @@
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="344_jtfMedicamentos">
-                  <CodeVariable name="jtfMedicamentos" type="8194" declaredType="javax.swing.JTextField"/>
+                <CodeExpression id="344_jButton2">
+                  <CodeVariable name="jButton2" type="8194" declaredType="javax.swing.JButton"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jtfMedicamentos"/>
+                      <ComponentRef name="jButton2"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -5083,7 +5247,7 @@
               <Parameters>
                 <CodeExpression id="346">
                   <ExpressionOrigin>
-                    <Value type="int" value="8"/>
+                    <Value type="int" value="11"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5096,7 +5260,7 @@
               <Parameters>
                 <CodeExpression id="347">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5109,7 +5273,7 @@
               <Parameters>
                 <CodeExpression id="348">
                   <ExpressionOrigin>
-                    <Value type="int" value="12"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5122,22 +5286,22 @@
               <Parameters>
                 <CodeExpression id="349">
                   <ExpressionOrigin>
-                    <Value type="int" value="20"/>
+                    <Value type="int" value="3"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="350_jLabel26">
-                  <CodeVariable name="jLabel26" type="8194" declaredType="javax.swing.JLabel"/>
+                <CodeExpression id="350_jtfToxicos">
+                  <CodeVariable name="jtfToxicos" type="8194" declaredType="javax.swing.JTextField"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
-                      <ComponentRef name="jLabel26"/>
+                      <ComponentRef name="jtfToxicos"/>
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
@@ -5165,7 +5329,7 @@
               <Parameters>
                 <CodeExpression id="352">
                   <ExpressionOrigin>
-                    <Value type="int" value="0"/>
+                    <Value type="int" value="11"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5191,7 +5355,7 @@
               <Parameters>
                 <CodeExpression id="354">
                   <ExpressionOrigin>
-                    <Value type="int" value="12"/>
+                    <Value type="int" value="8"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
@@ -5204,18 +5368,182 @@
               <Parameters>
                 <CodeExpression id="355">
                   <ExpressionOrigin>
+                    <Value type="int" value="3"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="248_jPanel3"/>
+              <StatementProvider type="CodeMethod">
+                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="356_jtfMedicamentos">
+                  <CodeVariable name="jtfMedicamentos" type="8194" declaredType="javax.swing.JTextField"/>
+                  <ExpressionOrigin>
+                    <ExpressionProvider type="ComponentRef">
+                      <ComponentRef name="jtfMedicamentos"/>
+                    </ExpressionProvider>
+                  </ExpressionOrigin>
+                </CodeExpression>
+                <CodeExpression id="351_gridBagConstraints"/>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="357_gridBagConstraints">
+                <CodeVariable name="gridBagConstraints"/>
+                <ExpressionOrigin>
+                  <ExpressionProvider type="CodeConstructor">
+                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                  </ExpressionProvider>
+                </ExpressionOrigin>
+              </CodeExpression>
+              <StatementProvider type="CodeExpression">
+                <CodeExpression id="357_gridBagConstraints"/>
+              </StatementProvider>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="357_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="358">
+                  <ExpressionOrigin>
+                    <Value type="int" value="8"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="357_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="359">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="357_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="360">
+                  <ExpressionOrigin>
+                    <Value type="int" value="12"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="357_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="361">
+                  <ExpressionOrigin>
                     <Value type="int" value="20"/>
                   </ExpressionOrigin>
                 </CodeExpression>
               </Parameters>
             </CodeStatement>
             <CodeStatement>
-              <CodeExpression id="236_jPanel3"/>
+              <CodeExpression id="248_jPanel3"/>
               <StatementProvider type="CodeMethod">
                 <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
               </StatementProvider>
               <Parameters>
-                <CodeExpression id="356_jLabel29">
+                <CodeExpression id="362_jLabel26">
+                  <CodeVariable name="jLabel26" type="8194" declaredType="javax.swing.JLabel"/>
+                  <ExpressionOrigin>
+                    <ExpressionProvider type="ComponentRef">
+                      <ComponentRef name="jLabel26"/>
+                    </ExpressionProvider>
+                  </ExpressionOrigin>
+                </CodeExpression>
+                <CodeExpression id="357_gridBagConstraints"/>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="363_gridBagConstraints">
+                <CodeVariable name="gridBagConstraints"/>
+                <ExpressionOrigin>
+                  <ExpressionProvider type="CodeConstructor">
+                    <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                  </ExpressionProvider>
+                </ExpressionOrigin>
+              </CodeExpression>
+              <StatementProvider type="CodeExpression">
+                <CodeExpression id="363_gridBagConstraints"/>
+              </StatementProvider>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="363_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="364">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="363_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="365">
+                  <ExpressionOrigin>
+                    <Value type="int" value="0"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="363_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="366">
+                  <ExpressionOrigin>
+                    <Value type="int" value="12"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="363_gridBagConstraints"/>
+              <StatementProvider type="CodeField">
+                <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="367">
+                  <ExpressionOrigin>
+                    <Value type="int" value="20"/>
+                  </ExpressionOrigin>
+                </CodeExpression>
+              </Parameters>
+            </CodeStatement>
+            <CodeStatement>
+              <CodeExpression id="248_jPanel3"/>
+              <StatementProvider type="CodeMethod">
+                <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+              </StatementProvider>
+              <Parameters>
+                <CodeExpression id="368_jLabel29">
                   <CodeVariable name="jLabel29" type="8194" declaredType="javax.swing.JLabel"/>
                   <ExpressionOrigin>
                     <ExpressionProvider type="ComponentRef">
@@ -5223,7 +5551,7 @@
                     </ExpressionProvider>
                   </ExpressionOrigin>
                 </CodeExpression>
-                <CodeExpression id="351_gridBagConstraints"/>
+                <CodeExpression id="363_gridBagConstraints"/>
               </Parameters>
             </CodeStatement>
           </LayoutCode>
@@ -5231,7 +5559,7 @@
       </SubComponents>
       <LayoutCode>
         <CodeStatement>
-          <CodeExpression id="357_koalaLayout1">
+          <CodeExpression id="369_koalaLayout1">
             <CodeVariable name="koalaLayout1" type="4096" declaredType="net.java.dev.koalalayout.KoalaLayout"/>
             <ExpressionOrigin>
               <ExpressionProvider type="CodeConstructor">
@@ -5240,16 +5568,16 @@
             </ExpressionOrigin>
           </CodeExpression>
           <StatementProvider type="CodeExpression">
-            <CodeExpression id="357_koalaLayout1"/>
+            <CodeExpression id="369_koalaLayout1"/>
           </StatementProvider>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="357_koalaLayout1"/>
+          <CodeExpression id="369_koalaLayout1"/>
           <StatementProvider type="CodeMethod">
             <CodeMethod name="setGridheight" class="net.java.dev.koalalayout.KoalaLayout" parameterTypes="int"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="358">
+            <CodeExpression id="370">
               <ExpressionOrigin>
                 <Value type="int" value="30"/>
               </ExpressionOrigin>
@@ -5257,12 +5585,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="357_koalaLayout1"/>
+          <CodeExpression id="369_koalaLayout1"/>
           <StatementProvider type="CodeMethod">
             <CodeMethod name="setGridwidth" class="net.java.dev.koalalayout.KoalaLayout" parameterTypes="int"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="359">
+            <CodeExpression id="371">
               <ExpressionOrigin>
                 <Value type="int" value="30"/>
               </ExpressionOrigin>
@@ -5270,7 +5598,7 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="360_jPanel1">
+          <CodeExpression id="372_jPanel1">
             <CodeVariable name="jPanel1" type="8194" declaredType="javax.swing.JPanel"/>
             <ExpressionOrigin>
               <ExpressionProvider type="ComponentRef">
@@ -5282,11 +5610,11 @@
             <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="357_koalaLayout1"/>
+            <CodeExpression id="369_koalaLayout1"/>
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="361_gridBagConstraints">
+          <CodeExpression id="373_gridBagConstraints">
             <CodeVariable name="gridBagConstraints"/>
             <ExpressionOrigin>
               <ExpressionProvider type="CodeConstructor">
@@ -5295,16 +5623,16 @@
             </ExpressionOrigin>
           </CodeExpression>
           <StatementProvider type="CodeExpression">
-            <CodeExpression id="361_gridBagConstraints"/>
+            <CodeExpression id="373_gridBagConstraints"/>
           </StatementProvider>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="361_gridBagConstraints"/>
+          <CodeExpression id="373_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="362">
+            <CodeExpression id="374">
               <ExpressionOrigin>
                 <Value type="int" value="0"/>
               </ExpressionOrigin>
@@ -5312,12 +5640,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="361_gridBagConstraints"/>
+          <CodeExpression id="373_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="363">
+            <CodeExpression id="375">
               <ExpressionOrigin>
                 <Value type="int" value="0"/>
               </ExpressionOrigin>
@@ -5325,12 +5653,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="361_gridBagConstraints"/>
+          <CodeExpression id="373_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="364">
+            <CodeExpression id="376">
               <ExpressionOrigin>
                 <Value type="int" value="30"/>
               </ExpressionOrigin>
@@ -5338,12 +5666,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="361_gridBagConstraints"/>
+          <CodeExpression id="373_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="365">
+            <CodeExpression id="377">
               <ExpressionOrigin>
                 <Value type="int" value="17"/>
               </ExpressionOrigin>
@@ -5351,17 +5679,17 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="360_jPanel1"/>
+          <CodeExpression id="372_jPanel1"/>
           <StatementProvider type="CodeMethod">
             <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
           </StatementProvider>
           <Parameters>
             <CodeExpression id="4_jPanel2"/>
-            <CodeExpression id="361_gridBagConstraints"/>
+            <CodeExpression id="373_gridBagConstraints"/>
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="366_gridBagConstraints">
+          <CodeExpression id="378_gridBagConstraints">
             <CodeVariable name="gridBagConstraints"/>
             <ExpressionOrigin>
               <ExpressionProvider type="CodeConstructor">
@@ -5370,16 +5698,16 @@
             </ExpressionOrigin>
           </CodeExpression>
           <StatementProvider type="CodeExpression">
-            <CodeExpression id="366_gridBagConstraints"/>
+            <CodeExpression id="378_gridBagConstraints"/>
           </StatementProvider>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="366_gridBagConstraints"/>
+          <CodeExpression id="378_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="367">
+            <CodeExpression id="379">
               <ExpressionOrigin>
                 <Value type="int" value="0"/>
               </ExpressionOrigin>
@@ -5387,12 +5715,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="366_gridBagConstraints"/>
+          <CodeExpression id="378_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="368">
+            <CodeExpression id="380">
               <ExpressionOrigin>
                 <Value type="int" value="17"/>
               </ExpressionOrigin>
@@ -5400,12 +5728,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="366_gridBagConstraints"/>
+          <CodeExpression id="378_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridwidth" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="369">
+            <CodeExpression id="381">
               <ExpressionOrigin>
                 <Value type="int" value="30"/>
               </ExpressionOrigin>
@@ -5413,12 +5741,12 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="366_gridBagConstraints"/>
+          <CodeExpression id="378_gridBagConstraints"/>
           <StatementProvider type="CodeField">
             <CodeField name="gridheight" class="java.awt.GridBagConstraints"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="370">
+            <CodeExpression id="382">
               <ExpressionOrigin>
                 <Value type="int" value="13"/>
               </ExpressionOrigin>
@@ -5426,13 +5754,13 @@
           </Parameters>
         </CodeStatement>
         <CodeStatement>
-          <CodeExpression id="360_jPanel1"/>
+          <CodeExpression id="372_jPanel1"/>
           <StatementProvider type="CodeMethod">
             <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
           </StatementProvider>
           <Parameters>
-            <CodeExpression id="236_jPanel3"/>
-            <CodeExpression id="366_gridBagConstraints"/>
+            <CodeExpression id="248_jPanel3"/>
+            <CodeExpression id="378_gridBagConstraints"/>
           </Parameters>
         </CodeStatement>
       </LayoutCode>

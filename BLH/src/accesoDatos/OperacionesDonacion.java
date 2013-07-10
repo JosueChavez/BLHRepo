@@ -6,6 +6,7 @@ package accesoDatos;
 
 import clases.Donacion;
 import clases.Donante;
+import clases.Historia;
 import clases.Paciente;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -185,6 +186,19 @@ public class OperacionesDonacion {
         }
         con.desconectar();
     }
+    public void almacenarHistorial(Historia h, String doc) {
+        try {
+            PreparedStatement sentencia = con.conectar().prepareStatement("INSERT INTO Historia (G,P1,P2,A,V,M,periodo,amenorrea,controlPrenatal,lugarControl,numero,fechaRegla,servicioProc,partoHospital,dondeParto,patologiaEmbarazo,cualPatologia,medicamentos,descripcion,toxicos,cualToxicos,patologiaEntrevista,motivo,obs,idPersona) VALUES ('" + h.getG() + "','" + h.getP1() + "','" + h.getP2() + "','" + h.getA() + "','" + h.getV() + "','" + h.getM() + "','" + h.getPeriodo() + "','" + h.getAmenorrea() + "','"+h.getControlPrenatal() + "','" + h.getLugarControl() + "','" + h.getNumero() + "','" + h.getFechaRegla() + "','"+ h.getServicioProc() + "','"+ h.getPartoHospital() + "','"+ h.getDondeParto() + "','" +h.getPatologiaEmbarazo()+"','"+h.getCualPatologia()+"','"+h.getMedicamentos()+"','"+h.getDescripcion()+"','"+h.getToxicos()+"','"+h.getCualToxicos()+"','"+h.getPatologiaEntrevista()+"','"+h.getMotivo()+"','"+h.getObs()+"','"+doc+"')");
+            sentencia.executeUpdate();
+            con.desconectar();
+            JOptionPane.showMessageDialog(null, "¡Datos Almacenados!");
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
+        }
+        con.desconectar();
+    }
+    
 
     public void listarDonanciones(JTable tabla, String doc) {
         try {

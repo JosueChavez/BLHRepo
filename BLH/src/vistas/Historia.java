@@ -12,6 +12,9 @@ package vistas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,11 +23,50 @@ import java.awt.Toolkit;
 public class Historia extends javax.swing.JFrame {
 
     /** Creates new form Historia */
+    int G = 0;
+    int P1 = 0;
+    int P2 = 0;
+    int A = 0;
+    int V = 0;
+    int M = 0;
+    int periodo = 0;
+    int amenorrea = 0;
+    String controlPrenatal = "";
+    String lugarControl = "";
+    int numero = 0;
+    Date fechaRegla = null;
+    String servicioProc = "";
+    String partoHospital = "";
+    String dondeParto = "";
+    String patologiaEmbarazo = "";
+    String cualPatologia = "";
+    String medicamento = "";
+    String descripcion = "";
+    String toxico = "";
+    String cualToxicos = "";
+    String patologiaEntrevista = "";
+    String motivo = "";
+    String obs = "";
+
     public Historia() {
         initComponents();
+        Date fe = enviarFecha("2012-01-01");
+        jcFechaParto.setDate(fe);
     }
     
-      @Override
+    
+    public Date enviarFecha(String fechaSQL) {
+        Date fecha = new Date();
+        try {
+            SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+            fecha = formatoDelTexto.parse(fechaSQL);
+            return fecha;
+        } catch (Exception ex) {
+        }
+        return fecha;
+    }
+
+    @Override
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconBLH.png"));
         return retValue;
@@ -43,6 +85,11 @@ public class Historia extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        control = new javax.swing.ButtonGroup();
+        parto = new javax.swing.ButtonGroup();
+        embarazo = new javax.swing.ButtonGroup();
+        medicamentos = new javax.swing.ButtonGroup();
+        toxicos = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -55,7 +102,7 @@ public class Historia extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jtfP1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfV = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jtfM = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -83,8 +130,10 @@ public class Historia extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jlDocumento = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jRadioButton7 = new javax.swing.JRadioButton();
@@ -146,6 +195,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel2, gridBagConstraints);
+
+        jtfG.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfGFocusLost(evt);
+            }
+        });
+        jtfG.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfGKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
@@ -158,6 +218,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel3, gridBagConstraints);
+
+        jtfP2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfP2FocusLost(evt);
+            }
+        });
+        jtfP2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfP2KeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
@@ -170,6 +241,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel4, gridBagConstraints);
+
+        jtfA.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfAFocusLost(evt);
+            }
+        });
+        jtfA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfAKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
         gridBagConstraints.gridy = 0;
@@ -182,6 +264,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel5, gridBagConstraints);
+
+        jtfP1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfP1FocusLost(evt);
+            }
+        });
+        jtfP1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfP1KeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 0;
@@ -194,11 +287,22 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel6, gridBagConstraints);
+
+        jtfV.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfVFocusLost(evt);
+            }
+        });
+        jtfV.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfVKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
-        jPanel2.add(jTextField4, gridBagConstraints);
+        jPanel2.add(jtfV, gridBagConstraints);
 
         jLabel7.setText("M:");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -206,6 +310,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel7, gridBagConstraints);
+
+        jtfM.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfMFocusLost(evt);
+            }
+        });
+        jtfM.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfMKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 19;
         gridBagConstraints.gridy = 0;
@@ -219,6 +334,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel8, gridBagConstraints);
+
+        jtfPeriodo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfPeriodoFocusLost(evt);
+            }
+        });
+        jtfPeriodo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfPeriodoKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
@@ -233,6 +359,17 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel9, gridBagConstraints);
+
+        jtfAmenorrea.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfAmenorreaFocusLost(evt);
+            }
+        });
+        jtfAmenorrea.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfAmenorreaKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 4;
@@ -248,7 +385,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel10, gridBagConstraints);
 
+        control.add(jRadioButton1);
         jRadioButton1.setText("SI");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 7;
@@ -256,7 +399,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jRadioButton1, gridBagConstraints);
 
+        control.add(jRadioButton2);
         jRadioButton2.setText("NO");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -271,6 +420,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel11, gridBagConstraints);
+
+        jtfLugar.setEnabled(false);
+        jtfLugar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfLugarFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 7;
@@ -280,13 +436,24 @@ public class Historia extends javax.swing.JFrame {
 
         jLabel12.setText("Número:");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 17;
+        gridBagConstraints.gridx = 16;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel12, gridBagConstraints);
+
+        jtfNumero.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfNumeroFocusLost(evt);
+            }
+        });
+        jtfNumero.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNumeroKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 19;
+        gridBagConstraints.gridx = 18;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
@@ -299,6 +466,12 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel13, gridBagConstraints);
+
+        jcFechaParto.addDateListener(new org.freixas.jcalendar.DateListener() {
+            public void dateChanged(org.freixas.jcalendar.DateEvent evt) {
+                jcFechaPartoDateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 10;
@@ -314,7 +487,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel14, gridBagConstraints);
 
+        parto.add(jRadioButton3);
         jRadioButton3.setText("SI");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 14;
@@ -322,7 +501,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jRadioButton3, gridBagConstraints);
 
+        parto.add(jRadioButton4);
         jRadioButton4.setText("NO");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 14;
@@ -337,6 +522,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel15, gridBagConstraints);
+
+        jtfPatologia.setEnabled(false);
+        jtfPatologia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfPatologiaFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 17;
@@ -344,7 +536,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jtfPatologia, gridBagConstraints);
 
+        embarazo.add(jRadioButton5);
         jRadioButton5.setText("SI");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 17;
@@ -352,7 +550,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jRadioButton5, gridBagConstraints);
 
+        embarazo.add(jRadioButton6);
         jRadioButton6.setText("NO");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 17;
@@ -367,6 +571,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
         jPanel2.add(jLabel17, gridBagConstraints);
+
+        jtfParto.setEnabled(false);
+        jtfParto.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfPartoFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 14;
@@ -389,28 +600,48 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jLabel27, gridBagConstraints);
+
+        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField1FocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridwidth = 4;
         gridBagConstraints.gridheight = 3;
         jPanel2.add(jTextField1, gridBagConstraints);
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito2.png"))); // NOI18N
+        jLabel25.setText("Documento:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        jPanel2.add(jLabel25, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 16;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridheight = 2;
+        jPanel2.add(jlDocumento, gridBagConstraints);
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito2.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 20;
-        jPanel2.add(jLabel30, gridBagConstraints);
+        jPanel2.add(jLabel32, gridBagConstraints);
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito2.png"))); // NOI18N
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondos/fondito2.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 20;
-        jPanel2.add(jLabel31, gridBagConstraints);
+        jPanel2.add(jLabel33, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -433,7 +664,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel3.add(jLabel18, gridBagConstraints);
 
+        medicamentos.add(jRadioButton7);
         jRadioButton7.setText("SI");
+        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton7ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
@@ -441,7 +678,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jRadioButton7, gridBagConstraints);
 
+        medicamentos.add(jRadioButton8);
         jRadioButton8.setText("NO");
+        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton8ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 0;
@@ -465,7 +708,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jLabel20, gridBagConstraints);
 
+        toxicos.add(jRadioButton9);
         jRadioButton9.setText("SI");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton9ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 4;
@@ -473,7 +722,13 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel3.add(jRadioButton9, gridBagConstraints);
 
+        toxicos.add(jRadioButton10);
         jRadioButton10.setText("NO");
+        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton10ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 4;
@@ -496,6 +751,12 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jLabel16, gridBagConstraints);
+
+        jtfObs.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfObsFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 13;
@@ -510,6 +771,12 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jLabel23, gridBagConstraints);
+
+        jtfPatologiaEntrevista.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfPatologiaEntrevistaFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 7;
@@ -524,6 +791,12 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jLabel24, gridBagConstraints);
+
+        jtfMotivo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfMotivoFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 10;
@@ -531,7 +804,12 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jtfMotivo, gridBagConstraints);
 
-        jButton1.setText("Aceptar");
+        jButton1.setText("Almacenar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
         gridBagConstraints.gridy = 17;
@@ -546,12 +824,26 @@ public class Historia extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jButton2, gridBagConstraints);
+
+        jtfToxicos.setEnabled(false);
+        jtfToxicos.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfToxicosFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 3;
         jPanel3.add(jtfToxicos, gridBagConstraints);
+
+        jtfMedicamentos.setEnabled(false);
+        jtfMedicamentos.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfMedicamentosFocusLost(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 0;
@@ -605,6 +897,235 @@ public class Historia extends javax.swing.JFrame {
         setBounds((screenSize.width-720)/2, (screenSize.height-557)/2, 720, 557);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtfGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfGKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfGKeyTyped
+
+    private void jtfP1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfP1KeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfP1KeyTyped
+
+    private void jtfP2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfP2KeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfP2KeyTyped
+
+    private void jtfAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfAKeyTyped
+
+    private void jtfVKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfVKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfVKeyTyped
+
+    private void jtfMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfMKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfMKeyTyped
+
+    private void jtfPeriodoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPeriodoKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfPeriodoKeyTyped
+
+    private void jtfAmenorreaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAmenorreaKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfAmenorreaKeyTyped
+
+    private void jtfNumeroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumeroKeyTyped
+        // TODO add your handling code here:
+        if (!Character.isDigit(evt.getKeyChar())) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtfNumeroKeyTyped
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+        controlPrenatal = "SI";
+         jtfLugar.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+        controlPrenatal = "NO";
+        jtfLugar.setEnabled(false);
+        jtfLugar.setText("");      
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+        partoHospital = "SI";
+        jtfParto.setText("");
+        jtfParto.setEnabled(false);
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        // TODO add your handling code here:
+        partoHospital = "NO";
+        jtfParto.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        // TODO add your handling code here:
+        patologiaEmbarazo = "SI";
+        jtfPatologia.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+        // TODO add your handling code here:
+        patologiaEmbarazo = "NO";
+        jtfPatologia.setText("");
+        jtfPatologia.setEnabled(false);
+
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
+
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+        // TODO add your handling code here:
+        medicamento = "SI";
+        jtfMedicamentos.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
+
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+        // TODO add your handling code here:
+        medicamento = "NO";
+        jtfMedicamentos.setEnabled(false);
+        jtfMedicamentos.setText("");
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        // TODO add your handling code here:
+        toxico = "SI";
+        jtfToxicos.setEnabled(true);
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+        // TODO add your handling code here:
+        toxico = "NO";
+        jtfToxicos.setEnabled(false);
+        jtfToxicos.setText("");
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
+
+    private void jtfGFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfGFocusLost
+        // TODO add your handling code here:
+        G = Integer.parseInt(jtfG.getText());
+    }//GEN-LAST:event_jtfGFocusLost
+
+    private void jtfP1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfP1FocusLost
+        // TODO add your handling code here:
+        P1 = Integer.parseInt(jtfP1.getText());
+    }//GEN-LAST:event_jtfP1FocusLost
+
+    private void jtfP2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfP2FocusLost
+        // TODO add your handling code here:
+        P2 = Integer.parseInt(jtfP2.getText());
+    }//GEN-LAST:event_jtfP2FocusLost
+
+    private void jtfAFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfAFocusLost
+        // TODO add your handling code here:
+        A = Integer.parseInt(jtfA.getText());
+    }//GEN-LAST:event_jtfAFocusLost
+
+    private void jtfVFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfVFocusLost
+        // TODO add your handling code here:
+        V = Integer.parseInt(jtfV.getText());
+    }//GEN-LAST:event_jtfVFocusLost
+
+    private void jtfMFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfMFocusLost
+        // TODO add your handling code here:
+        M = Integer.parseInt(jtfM.getText());
+    }//GEN-LAST:event_jtfMFocusLost
+
+    private void jtfPeriodoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfPeriodoFocusLost
+        // TODO add your handling code here:
+        periodo = Integer.parseInt(jtfPeriodo.getText());
+    }//GEN-LAST:event_jtfPeriodoFocusLost
+
+    private void jtfAmenorreaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfAmenorreaFocusLost
+        // TODO add your handling code here:
+        amenorrea = Integer.parseInt(jtfAmenorrea.getText());
+    }//GEN-LAST:event_jtfAmenorreaFocusLost
+
+    private void jtfLugarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfLugarFocusLost
+        // TODO add your handling code here:
+        lugarControl = jtfLugar.getText();
+    }//GEN-LAST:event_jtfLugarFocusLost
+
+    private void jtfNumeroFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfNumeroFocusLost
+        // TODO add your handling code here:
+        numero = Integer.parseInt(jtfNumero.getText());
+    }//GEN-LAST:event_jtfNumeroFocusLost
+
+    private void jcFechaPartoDateChanged(org.freixas.jcalendar.DateEvent evt) {//GEN-FIRST:event_jcFechaPartoDateChanged
+        // TODO add your handling code here:
+        fechaRegla = jcFechaParto.getDate();
+        JOptionPane.showMessageDialog(rootPane, fechaRegla);
+    }//GEN-LAST:event_jcFechaPartoDateChanged
+
+    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+        // TODO add your handling code here:
+        servicioProc = jTextField1.getText();
+    }//GEN-LAST:event_jTextField1FocusLost
+
+    private void jtfPartoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfPartoFocusLost
+        // TODO add your handling code here:
+        dondeParto = jtfParto.getText();
+    }//GEN-LAST:event_jtfPartoFocusLost
+
+    private void jtfPatologiaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfPatologiaFocusLost
+        // TODO add your handling code here:
+        cualPatologia = jtfPatologia.getText();
+    }//GEN-LAST:event_jtfPatologiaFocusLost
+
+    private void jtfMedicamentosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfMedicamentosFocusLost
+        // TODO add your handling code here:
+        descripcion = jtfMedicamentos.getText();
+    }//GEN-LAST:event_jtfMedicamentosFocusLost
+
+    private void jtfToxicosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfToxicosFocusLost
+        // TODO add your handling code here:
+        toxico = jtfToxicos.getText();
+    }//GEN-LAST:event_jtfToxicosFocusLost
+
+    private void jtfPatologiaEntrevistaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfPatologiaEntrevistaFocusLost
+        // TODO add your handling code here:
+        patologiaEntrevista = jtfPatologiaEntrevista.getText();
+    }//GEN-LAST:event_jtfPatologiaEntrevistaFocusLost
+
+    private void jtfMotivoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfMotivoFocusLost
+        // TODO add your handling code here:
+        motivo = jtfMotivo.getText();
+    }//GEN-LAST:event_jtfMotivoFocusLost
+
+    private void jtfObsFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfObsFocusLost
+        // TODO add your handling code here:
+        obs = jtfObs.getText();
+    }//GEN-LAST:event_jtfObsFocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -641,6 +1162,8 @@ public class Historia extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup control;
+    private javax.swing.ButtonGroup embarazo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -660,12 +1183,13 @@ public class Historia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -692,8 +1216,8 @@ public class Historia extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField4;
     private org.freixas.jcalendar.JCalendarCombo jcFechaParto;
+    public static volatile javax.swing.JLabel jlDocumento;
     private javax.swing.JTextField jtfA;
     private javax.swing.JTextField jtfAmenorrea;
     private javax.swing.JTextField jtfG;
@@ -710,5 +1234,9 @@ public class Historia extends javax.swing.JFrame {
     private javax.swing.JTextField jtfPatologiaEntrevista;
     private javax.swing.JTextField jtfPeriodo;
     private javax.swing.JTextField jtfToxicos;
+    private javax.swing.JTextField jtfV;
+    private javax.swing.ButtonGroup medicamentos;
+    private javax.swing.ButtonGroup parto;
+    private javax.swing.ButtonGroup toxicos;
     // End of variables declaration//GEN-END:variables
 }
